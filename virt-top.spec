@@ -26,7 +26,7 @@ BuildRequires:	ocaml-extlib-devel
 BuildRequires:	ocaml-libvirt-devel >= 0.6.1.2-5
 # Tortuous list of BRs for gettext.
 BuildRequires:	ocaml-fileutils-devel
-BuildRequires:	ocaml-gettext-devel >= 0.3.3
+BuildRequires:	ocaml-gettext-tools >= 0.3.3
 # For msgfmt:
 BuildRequires:	gettext
 # Non-OCaml BRs.
