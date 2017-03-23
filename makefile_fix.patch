@@ -1,0 +1,16 @@
+--- virt-top-1.0.8/virt-top/Makefile.in~	2012-03-06 12:32:12.000000000 +0100
++++ virt-top-1.0.8/virt-top/Makefile.in	2017-03-21 17:15:44.275117838 +0100
+@@ -64,11 +64,11 @@
+ 
+ XOBJS		:= $(OBJS:.cmo=.cmx)
+ 
+-OCAMLCFLAGS	:= -g -warn-error A
++OCAMLCFLAGS	:= -g
+ OCAMLCLIBS	:= -linkpkg
+ 
+ OCAMLOPTPACKAGES := $(OCAMLCPACKAGES)
+-OCAMLOPTFLAGS	:= -warn-error A
++OCAMLOPTFLAGS	:=
+ OCAMLOPTLIBS	:= $(OCAMLCLIBS)
+ 
+ BYTE_TARGETS	:= virt-top

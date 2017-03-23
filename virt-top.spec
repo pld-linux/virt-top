@@ -6,15 +6,16 @@
 Summary:	Utility like top(1) for displaying virtualization stats
 Name:		virt-top
 Version:	1.0.8
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://people.redhat.com/~rjones/virt-top/files/%{name}-%{version}.tar.gz
 # Source0-md5:	cdb61d35e64c78720082d58f8edfb9da
+Patch0:     makefile_fix.patch
 URL:		http://people.redhat.com/~rjones/virt-top/
 BuildRequires:	ocaml >= 3.10.2
 BuildRequires:	ocaml-findlib-devel
-BuildRequires:	ocaml-ocamldoc
+BuildRequires:	ocaml-ocamldoc-devel
 ExcludeArch:	sparc64 s390 s390x
 # Need the ncurses / ncursesw (--enable-widec) fix.
 BuildRequires:	ocaml-calendar-devel
@@ -26,7 +27,7 @@ BuildRequires:	ocaml-extlib-devel
 BuildRequires:	ocaml-libvirt-devel >= 0.6.1.2-5
 # Tortuous list of BRs for gettext.
 BuildRequires:	ocaml-fileutils-devel
-BuildRequires:	ocaml-gettext-tools >= 0.3.3
+BuildRequires:	ocaml-gettext-devel
 # For msgfmt:
 BuildRequires:	gettext
 # Non-OCaml BRs.
@@ -48,6 +49,7 @@ different virtualization systems.
 
 %prep
 %setup -q
+%patch0 -p1
 
 chmod -x COPYING
 
